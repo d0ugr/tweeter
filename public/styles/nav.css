@@ -13,12 +13,12 @@ nav {
   color:            white;
 }
 
-nav div#title {
+nav div#nav_title {
   float:            left;
   font-family:      "Bungee";
 }
 
-nav div#tweet {
+nav div#nav_tweet {
   float:            right;
 }
 

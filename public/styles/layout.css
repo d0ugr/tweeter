@@ -24,9 +24,14 @@ html {
 
 body {
   height:           100%;
-  background:       #F4F1EC url("../images/profile-hex.png") center / 50% no-repeat fixed;
+  padding-top:      120px;
+  background:       #F4F1EC; /*url("/images/profile-hex.png") center / 50% no-repeat fixed;*/
   color:            #545149;
   font-size:        0.75em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin:           0;
 }
 
 /*

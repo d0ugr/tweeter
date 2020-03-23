@@ -1,0 +1,25 @@
+
+
+
+header {
+  position:         relative;
+  width:            100%;
+  height:           400px;
+  background:       burlywood url("/images/food.png") repeat;
+  text-align:       center;
+}
+
+header div.outer {
+  position:         absolute;
+  top:              50%;
+  width:            100%;
+  -ms-transform:    translateY(-50%);
+  transform:        translateY(-50%);
+}
+
+header div.content {
+  display:          inline-block;
+}
+
+
+
