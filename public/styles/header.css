@@ -4,7 +4,7 @@
 header {
   position:         relative;
   width:            100%;
-  height:           400px;
+  height:           14em;
   background:       burlywood url("/images/food.png") repeat;
   text-align:       center;
 }
