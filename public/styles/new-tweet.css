@@ -1,0 +1,41 @@
+
+
+
+section.new-tweet {
+  width:            90%;
+  margin:           .5em auto;
+}
+
+section.new-tweet label {
+  display:          block;
+  width:            100%;
+  margin:           .5em 0 1em;
+  padding:          0 0 .4em;
+  border-bottom:    0.15em solid burlywood;
+}
+
+section.new-tweet textarea {
+  display:          block;
+  width:            100%;
+  border:           none;
+  box-shadow:       0 0 .25em 0 rebeccapurple;
+  margin:           0 0 .5em;
+  padding:          .25em;
+}
+
+section.new-tweet button {
+  border:           .15em solid gold;
+  box-shadow:       0 0 .25em 0 burlywood;
+  padding:          .25em 1em;
+  background:       white;
+  font-family:      Bungee;
+}
+
+section.new-tweet output {
+  float:            right;
+  padding:          .25em 0;
+  font-family:      Bungee;
+}
+
+
+
