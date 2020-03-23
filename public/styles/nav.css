@@ -1,0 +1,26 @@
+
+
+
+nav {
+  position:         fixed;
+  z-index:          420;
+  top:              0;
+  left:             0;
+  right:            0;
+  height:           120px; /*4.25em;*/
+  padding:          1.5em;
+  background-color: #4056A1;
+  color:            white;
+}
+
+nav div#title {
+  float:            left;
+  font-family:      "Bungee";
+}
+
+nav div#tweet {
+  float:            right;
+}
+
+
+
