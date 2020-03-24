@@ -21,13 +21,14 @@ section.new-tweet textarea {
   box-shadow:       0 0 .25em 0 rebeccapurple;
   margin:           0 0 .5em;
   padding:          .25em;
+  background:       ghostwhite;
 }
 
 section.new-tweet button {
   border:           .15em solid gold;
   box-shadow:       0 0 .25em 0 burlywood;
   padding:          .25em 1em;
-  background:       white;
+  background:       ghostwhite;
   font-family:      Bungee;
 }
 
