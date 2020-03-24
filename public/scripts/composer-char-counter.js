@@ -7,7 +7,7 @@ const MAX_TWEET_LENGTH = 140;
 
 $(document).ready(function() {
 
-  const $tweetTextarea  = $(".new-tweet output");
+  const $tweetTextarea  = $(".new-tweet textarea");
   const $charsRemaining = $(".new-tweet output");
 
   $tweetTextarea.on("input change propertychange", function(_event) {
