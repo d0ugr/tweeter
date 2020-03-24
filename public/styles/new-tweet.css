@@ -8,20 +8,17 @@ section.new-tweet {
 
 section.new-tweet label {
   display:          block;
-  width:            100%;
-  margin:           .5em 0 1em;
   padding:          0 0 .4em;
-  border-bottom:    0.15em solid burlywood;
 }
 
 section.new-tweet textarea {
   display:          block;
   width:            100%;
   border:           none;
-  box-shadow:       0 0 .25em 0 rebeccapurple;
+  border-bottom:    0.15em solid burlywood;
   margin:           0 0 .5em;
   padding:          .25em;
-  background:       ghostwhite;
+  background:       rgba(1, 1, 1, 0.05);
 }
 
 section.new-tweet button {
