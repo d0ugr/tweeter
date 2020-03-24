@@ -1,0 +1,24 @@
+
+
+
+section.tweets {
+  width:            90%;
+  margin:           .5em auto;
+}
+
+section.tweets article header img {
+  width:            2em;
+  height:           2em;
+}
+
+section.tweets article footer div {
+  float:            right;
+}
+
+section.tweets article footer img {
+  width:            1em;
+  height:           1em;
+}
+
+
+
