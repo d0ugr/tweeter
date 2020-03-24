@@ -16,9 +16,9 @@ section.new-tweet textarea {
   width:            100%;
   border:           none;
   border-bottom:    0.15em solid burlywood;
-  margin:           0 0 .5em;
+  margin:           0 0 1em;
   padding:          .25em;
-  background:       rgba(1, 1, 1, 0.05);
+  background:       transparent;
 }
 
 section.new-tweet button {
