@@ -16,20 +16,40 @@ section#tweets article:hover {
   box-shadow:       .5em .5em 0 0 rebeccapurple;
 }
 
+section#tweets article:hover div.handle {
+  display:          inline-block;
+}
+
 section#tweets article header {
   border:           none;
-  padding:          0 0 .5em;
+  margin:           0 0 .5em;
 }
 
 section#tweets article header img {
-  width:            2em;
   height:           2em;
+  vertical-align:   middle;
+}
+
+section#tweets article header div {
+  display:          inline-block;
+  padding:          0 .5em 0;
+  font-weight:      bolder;
+}
+
+section#tweets article header div.handle {
+  display:          none;
+  float:            right;
+  opacity:          .5;
 }
 
 section#tweets article footer {
   border-top:       .15em solid burlywood;
   margin:           .5em 0 0;
-  padding:          .5em 0 0;
+  padding:          .3em 0 0;
+}
+
+section#tweets article footer span {
+  font-size:        65%;
 }
 
 section#tweets article footer div {
@@ -39,6 +59,7 @@ section#tweets article footer div {
 section#tweets article footer img {
   width:            1em;
   height:           1em;
+  vertical-align:   middle;
 }
 
 
