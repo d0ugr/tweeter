@@ -1,21 +1,42 @@
 
 
 
-section.tweets {
+section#tweets {
   width:            90%;
   margin:           .5em auto;
 }
 
-section.tweets article header img {
+section#tweets article {
+  border:           .15em solid burlywood;
+  margin:           1em 0;
+  padding:          .5em;
+}
+
+section#tweets article:hover {
+  box-shadow:       .5em .5em 0 0 rebeccapurple;
+}
+
+section#tweets article header {
+  border:           none;
+  padding:          0 0 .5em;
+}
+
+section#tweets article header img {
   width:            2em;
   height:           2em;
 }
 
-section.tweets article footer div {
+section#tweets article footer {
+  border-top:       .15em solid burlywood;
+  margin:           .5em 0 0;
+  padding:          .5em 0 0;
+}
+
+section#tweets article footer div {
   float:            right;
 }
 
-section.tweets article footer img {
+section#tweets article footer img {
   width:            1em;
   height:           1em;
 }
