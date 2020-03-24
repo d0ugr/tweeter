@@ -5,13 +5,12 @@ const MAX_TWEET_LENGTH = 140;
 
 
 
-$(document).ready(() => {
+$(document).ready(function() {
 
-  const $textInput      = $(".new-tweet textarea");
   const $charsRemaining = $(".new-tweet output");
 
-  $textInput.bind("input propertychange", () => {
-    $charsRemaining.html(MAX_TWEET_LENGTH - $textInput.val().length);
+  $(".new-tweet textarea").bind("input propertychange", function(_event) {
+    $charsRemaining.html(MAX_TWEET_LENGTH - $(this).val().length);
   });
 
 });
