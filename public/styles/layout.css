@@ -38,5 +38,9 @@ h1, h2, h3, h4, h5, h6 {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+ .error {
+   color:           red;
+ }
+
 
 
