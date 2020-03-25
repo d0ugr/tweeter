@@ -4,7 +4,10 @@
 section#tweets {
   width:            90%;
   margin:           .5em auto;
+  cursor:           default;
 }
+
+
 
 section#tweets article {
   border:           .15em solid burlywood;
@@ -19,6 +22,8 @@ section#tweets article:hover {
 section#tweets article:hover div.handle {
   display:          inline-block;
 }
+
+
 
 section#tweets article header {
   border:           none;
@@ -41,6 +46,14 @@ section#tweets article header div.handle {
   float:            right;
   opacity:          .5;
 }
+
+
+
+section#tweets article p {
+  word-break:       break-all;
+}
+
+
 
 section#tweets article footer {
   border-top:       .15em solid burlywood;
