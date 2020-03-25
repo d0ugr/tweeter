@@ -98,6 +98,14 @@ const loadTweets = function() {
 $(document).ready(function() {
 
   loadTweets();
+  $("section.new-tweet textarea").focus();
+
+  $("section.new-tweet textarea").on("keydown", function(event) {
+    if (event.keyCode === KeyboardEvent.DOM_VK_RETURN) {
+      event.preventDefault();
+      $("section.new-tweet form").trigger("submit");
+    }
+  });
 
   $("section.new-tweet form").on("submit", function(event) {
     const tweetText = $("section.new-tweet textarea").val().trim();
