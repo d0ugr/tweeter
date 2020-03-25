@@ -42,7 +42,7 @@ const createTweetElement = function(tweet) {
       </header>
       <p>${tweet.content.text}</p>
       <footer>
-        <span>${new Date(1461116232227)}</span>
+        <span>${Math.floor((Date.now() - tweet.created_at) / 1000 / 86400)} days ago</span>
         <div>
           <img src="/images/profile-hex.png">
           <img src="/images/profile-hex.png">
@@ -56,8 +56,10 @@ const createTweetElement = function(tweet) {
 
 const renderTweets = function(tweets) {
 
+  const $tweetsSection = $("section#tweets");
+
   for (const tweet of tweets) {
-    $("section#tweets").append(createTweetElement(tweet));
+    $tweetsSection.append(createTweetElement(tweet));
   }
 
 };
