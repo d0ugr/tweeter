@@ -85,7 +85,7 @@ const loadTweets = function() {
 
   getTweets((err, data) => {
     if (err) {
-      $("section.new-tweet").append(`<br>Error getting tweets: ${JSON.stringify(err, null, 2)}`);
+      showNewTweetError(`Error loading tweets: ${JSON.stringify(err, null, 2)}`);
     } else {
       renderTweets(data);
     }
@@ -127,7 +127,7 @@ $(document).ready(function() {
         data:   $(this).serialize()
       }).then(function(_data, status, xhr) {
         if (status !== "success") {
-          $("section.new-tweet").append(`<br>${status}: ${JSON.stringify(xhr, null, 2)}`);
+          showNewTweetError(`${status}: ${JSON.stringify(xhr, null, 2)}`);
         } else {
           // $("section#tweets").prepend(createTweetElement({
           //   "user": {
@@ -143,7 +143,7 @@ $(document).ready(function() {
 
           getTweets((err, data) => {
             if (err) {
-              $("section.new-tweet").append(`<br>Error getting tweets: ${JSON.stringify(err, null, 2)}`);
+              showNewTweetError(`Error getting tweet: ${JSON.stringify(err, null, 2)}`);
             } else {
               renderTweets(data[data.length - 1]);
             }
