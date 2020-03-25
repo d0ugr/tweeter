@@ -58,20 +58,30 @@ const loadTweets = function() {
 
 $(document).ready(function() {
 
-  // renderTweets(tweetData);
   loadTweets();
 
   $("section.new-tweet form").on("submit", function(event) {
+    const tweetText = $("section.new-tweet textarea").val().trim();
+
     event.preventDefault();
-    $.ajax("/tweets", {
-      method: "POST",
-      data:   $(this).serialize()
-    }).then(function(_data, status, xhr) {
-      if (status !== "success") {
-        $("section.new-tweet textarea").val("");
-      }
-      $("section.new-tweet").append(`<br>${status}: ${JSON.stringify(xhr, null, 2)}`);
-    });
+    if (!tweetText) {
+      alert("Empty tweets not allowed");
+    } else if (tweetText.length > MAX_TWEET_LENGTH) {
+      alert("Your tweet is waaaaaaaay too long");
+    } else if (tweetText.toLowerCase().indexOf("fight club") !== -1) {
+      alert("You do not talk about Fight Club.  There are two rules about this.");
+    } else {
+      $.ajax("/tweets", {
+        method: "POST",
+        data:   $(this).serialize()
+      }).then(function(_data, status, xhr) {
+        if (status !== "success") {
+          $("section.new-tweet textarea").val("");
+        } else {
+          $("section.new-tweet").append(`<br>${status}: ${JSON.stringify(xhr, null, 2)}`);
+        }
+      });
+    }
   });
 
 });
