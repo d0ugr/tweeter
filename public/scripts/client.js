@@ -9,8 +9,7 @@ const tweetData = [
   {
     "user": {
       "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
+      "avatars": "https://i.imgur.com/73hZDYK.png",
       "handle": "@SirIsaac"
     },
     "content": {
@@ -69,6 +68,21 @@ const renderTweets = function(tweets) {
 $(document).ready(function() {
 
   renderTweets(tweetData);
+
+  $("section.new-tweet form").on("submit", function(event) {
+    event.preventDefault();
+    $.ajax("/tweets", {
+      method: "POST",
+      data:   $(this).serialize()
+    }).then(function(err, status, xhr) {
+      if (err) {
+        $("section.new-tweet").append(err);
+      } else {
+        $("section.new-tweet textarea").val("");
+        $("section.new-tweet").append(`${status}: ${JSON.stringify(xhr, null, 2)}<br><br>`);
+      }
+    });
+  });
 
 });
 
