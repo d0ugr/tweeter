@@ -49,12 +49,6 @@ section#tweets article header div.handle {
 
 
 
-section#tweets article p {
-  word-break:       break-all;
-}
-
-
-
 section#tweets article footer {
   border-top:       .15em solid burlywood;
   margin:           .5em 0 0;
