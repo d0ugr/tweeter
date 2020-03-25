@@ -32,8 +32,12 @@ const renderTweets = function(tweets) {
 
   const $tweetsSection = $("section#tweets");
 
-  for (const tweet of tweets) {
-    $tweetsSection.prepend(createTweetElement(tweet));
+  if (!Array.isArray(tweets)) {
+    $tweetsSection.prepend(createTweetElement(tweets));
+  } else {
+    for (const tweet of tweets) {
+      $tweetsSection.prepend(createTweetElement(tweet));
+    }
   }
 
 };
@@ -105,7 +109,7 @@ $(document).ready(function() {
             if (err) {
               $("section.new-tweet").append(`<br>Error getting tweets: ${JSON.stringify(err, null, 2)}`);
             } else {
-              renderTweets([data[data.length - 1]]);
+              renderTweets(data[data.length - 1]);
             }
           });
           $("section.new-tweet textarea").val("");
