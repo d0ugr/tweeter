@@ -16,7 +16,6 @@ const escapeText = function(text) {
 
 const createTweetElement = function(tweet) {
 
-  console.log(document.createTextNode(tweet.content.text));
   return $(`
     <article>
       <header>
@@ -114,6 +113,7 @@ $(document).ready(function() {
           //   },
           //   "created_at": Date.now()
           // }));
+
           getTweets((err, data) => {
             if (err) {
               $("section.new-tweet").append(`<br>Error getting tweets: ${JSON.stringify(err, null, 2)}`);

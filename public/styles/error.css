@@ -1,0 +1,25 @@
+
+
+
+div.error {
+  /* display:          none; */
+  margin:           1.5em .5em;
+  border:           .1em solid red;
+  box-shadow:       0 0 .5em .5em red;
+  padding:          1em;
+}
+
+div.error h1 {
+  margin:           0 0 .25em;
+  font-family:      Bungee;
+  color:            red;
+}
+
+div.error p {
+  margin:           0;
+  font-weight:      bolder;
+  color:            black;
+}
+
+
+
