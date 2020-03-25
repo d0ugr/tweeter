@@ -33,12 +33,12 @@ const renderTweets = function(tweets) {
   const $tweetsSection = $("section#tweets");
 
   for (const tweet of tweets) {
-    $tweetsSection.append(createTweetElement(tweet));
+    $tweetsSection.prepend(createTweetElement(tweet));
   }
 
 };
 
-const loadTweets = function() {
+const getTweets = function(callback) {
 
   $.ajax("/tweets", {
     method:   "GET",
@@ -46,7 +46,19 @@ const loadTweets = function() {
     cache:    false
   }).then(function(data, status, xhr) {
     if (status !== "success") {
-      $("section.new-tweet").append(`<br>${status}: ${JSON.stringify(xhr, null, 2)}`);
+      callback(xhr, null);
+    } else {
+      callback(null, data);
+    }
+  });
+
+};
+
+const loadTweets = function() {
+
+  getTweets((err, data) => {
+    if (err) {
+      $("section.new-tweet").append(`<br>Error getting tweets: ${JSON.stringify(err, null, 2)}`);
     } else {
       renderTweets(data);
     }
