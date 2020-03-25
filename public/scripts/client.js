@@ -97,24 +97,28 @@ const loadTweets = function() {
 
 $(document).ready(function() {
 
-  loadTweets();
-  $("section.new-tweet textarea").focus();
+  const $form     = $("section.new-tweet form");
+  const $textarea = $("section.new-tweet textarea");
+  const $error    = $("section.new-tweet .error");
 
-  $("section.new-tweet textarea").on("keydown", function(event) {
+  loadTweets();
+  $textarea.focus();
+
+  $textarea.on("keydown", function(event) {
     if (event.keyCode === KeyboardEvent.DOM_VK_RETURN) {
       event.preventDefault();
-      $("section.new-tweet form").trigger("submit");
+      $form.trigger("submit");
     }
   });
 
-  $("section.new-tweet form").on("submit", function(event) {
-    const tweetText = $("section.new-tweet textarea").val().trim();
+  $form.on("submit", function(event) {
+    const tweetText = $textarea.val().trim();
 
     event.preventDefault();
     if (!tweetText) {
       showNewTweetError(null, "Empty tweets not allowed.");
     } else if (tweetText.length > MAX_TWEET_LENGTH) {
-      showNewTweetError(null, "Your tweet is waaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaay too long.");
+      showNewTweetError(null, "Your tweet is waaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaay too long.");
     } else if (tweetText.toLowerCase().indexOf("fight club") !== -1) {
       showNewTweetError("DO NOT TALK ABOUT FIGHT CLUB", "There are two rules about this. They are the first ones. ");
     } else {
@@ -144,14 +148,14 @@ $(document).ready(function() {
               renderTweets(data[data.length - 1]);
             }
           });
-          $("section.new-tweet textarea").val("");
-          $("section.new-tweet .error").hide();
+          $error.hide();
+          $textarea.val("").focus();
         }
       });
     }
   });
 
-  $("section.new-tweet div.error").on("click", function(event) {
+  $error.on("click", function(event) {
     event.preventDefault();
     $(this).hide();
   });
