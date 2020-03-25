@@ -6,15 +6,24 @@
 
 
 
+const escapeText = function(text) {
+
+  let span = document.createElement("span");
+  span.appendChild(document.createTextNode(text));
+  return span.innerHTML;
+
+};
+
 const createTweetElement = function(tweet) {
 
+  console.log(document.createTextNode(tweet.content.text));
   return $(`
     <article>
       <header>
         <img src="${tweet.user.avatars}"><div class="name">${tweet.user.name}</div>
         <div class="handle">${tweet.user.handle}</div>
       </header>
-      <p>${tweet.content.text}</p>
+      <p>${escapeText(tweet.content.text)}</p>
       <footer>
         <span>${Math.floor((Date.now() - tweet.created_at) / 1000 / 86400)} days ago</span>
         <div>
