@@ -21,6 +21,11 @@ section.new-tweet textarea {
   background:       transparent;
 }
 
+section.new-tweet textarea::placeholder {
+  font-style:       italic;
+  opacity:          .15;
+}
+
 section.new-tweet button {
   border:           .15em solid gold;
   box-shadow:       0 0 .25em 0 burlywood;
