@@ -90,17 +90,24 @@ $(document).ready(function() {
         if (status !== "success") {
           $("section.new-tweet").append(`<br>${status}: ${JSON.stringify(xhr, null, 2)}`);
         } else {
-          $("section#tweets").prepend(createTweetElement({
-            "user": {
-              "name":    $("header div h2").html(),
-              "avatars": $("header div img").attr("src"),
-              "handle":  `@${$("header div h2").html()}`
-            },
-            "content": {
-              "text": $("section.new-tweet textarea").val()
-            },
-            "created_at": Date.now()
-          }));
+          // $("section#tweets").prepend(createTweetElement({
+          //   "user": {
+          //     "name":    $("header div h2").html(),
+          //     "avatars": $("header div img").attr("src"),
+          //     "handle":  `@${$("header div h2").html()}`
+          //   },
+          //   "content": {
+          //     "text": $("section.new-tweet textarea").val()
+          //   },
+          //   "created_at": Date.now()
+          // }));
+          getTweets((err, data) => {
+            if (err) {
+              $("section.new-tweet").append(`<br>Error getting tweets: ${JSON.stringify(err, null, 2)}`);
+            } else {
+              renderTweets([data[data.length - 1]]);
+            }
+          });
           $("section.new-tweet textarea").val("");
         }
       });
