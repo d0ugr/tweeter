@@ -35,5 +35,9 @@ section.new-tweet output {
   font-family:      Bungee;
 }
 
+section.new-tweet .error {
+  display:          none;
+}
+
 
 

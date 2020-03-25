@@ -8,11 +8,11 @@
 
 
 div.error {
-  /* display:          none; */
   margin:           1.5em .5em;
   border:           .1em solid red;
   box-shadow:       0 0 .5em .5em red;
   padding:          1em;
+  cursor:           default;
 }
 
 div.error h1 {

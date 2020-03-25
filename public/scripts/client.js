@@ -6,6 +6,11 @@
 
 
 
+const DEFAULT_ERROR_MESSAGE     = "NOPE NOPE NOPE";
+const DEFAULT_ERROR_DESCRIPTION = "You totally screwed up and you need to apologize.";
+
+
+
 const escapeText = function(text) {
 
   let span = document.createElement("span");
@@ -13,6 +18,16 @@ const escapeText = function(text) {
   return span.innerHTML;
 
 };
+
+const showNewTweetError = function(message, description) {
+
+  $("section.new-tweet .error h1").html((message     ? message     : DEFAULT_ERROR_MESSAGE));
+  $("section.new-tweet .error p") .html((description ? description : DEFAULT_ERROR_DESCRIPTION));
+  $("section.new-tweet .error").show();
+
+};
+
+
 
 const createTweetElement = function(tweet) {
 
@@ -89,11 +104,11 @@ $(document).ready(function() {
 
     event.preventDefault();
     if (!tweetText) {
-      alert("Empty tweets not allowed");
+      showNewTweetError(null, "Empty tweets not allowed.");
     } else if (tweetText.length > MAX_TWEET_LENGTH) {
-      alert("Your tweet is waaaaaaaay too long");
+      showNewTweetError(null, "Your tweet is waaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaay too long.");
     } else if (tweetText.toLowerCase().indexOf("fight club") !== -1) {
-      alert("You do not talk about Fight Club.  There are two rules about this.");
+      showNewTweetError("DO NOT TALK ABOUT FIGHT CLUB", "There are two rules about this. They are the first ones. ");
     } else {
       $.ajax("/tweets", {
         method: "POST",
@@ -122,9 +137,15 @@ $(document).ready(function() {
             }
           });
           $("section.new-tweet textarea").val("");
+          $("section.new-tweet .error").hide();
         }
       });
     }
+  });
+
+  $("section.new-tweet div.error").on("click", function(event) {
+    event.preventDefault();
+    $(this).hide();
   });
 
 });
