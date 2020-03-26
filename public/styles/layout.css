@@ -2,10 +2,10 @@
 
 
 /*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
+** http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+** https://css-tricks.com/international-box-sizing-awareness-day/
+** Do not modify these two selectors, please
+*/
 
 *, *:before, *:after {
   box-sizing:       inherit;
@@ -13,8 +13,8 @@
 }
 
 /*
- * Global layout stuff
- */
+**  Global layout stuff
+*/
 
 html {
   box-sizing:       border-box;
@@ -28,7 +28,8 @@ body {
   background:       #F4F1EC; /*url("/images/profile-hex.png") center / 50% no-repeat fixed;*/
   color:            #545149;
   font-size:        0.75em;
-  word-break:       break-all;
+  overflow-wrap:    break-word;
+  cursor:           default;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -36,12 +37,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+**  Additional CSS can be defined below or in other CSS files, as per instructions
+*/
 
- .bold {
-   font-weight:     bold;
- }
+.bold {
+  font-weight:     bold;
+}
 
 
 
