@@ -9,6 +9,8 @@
 const DEFAULT_ERROR_MESSAGE     = "NOPE NOPE NOPE";
 const DEFAULT_ERROR_DESCRIPTION = "You totally screwed up and you need to apologize.";
 
+const ANIMATION_DURATION = "fast";
+
 
 
 const escapeText = function(text) {
@@ -23,7 +25,13 @@ const showNewTweetError = function(message, description) {
 
   $("section.new-tweet .error h1").html((message     ? message     : DEFAULT_ERROR_MESSAGE));
   $("section.new-tweet .error p") .html((description ? description : DEFAULT_ERROR_DESCRIPTION));
-  $("section.new-tweet .error").show();
+  $("section.new-tweet .error").slideDown(ANIMATION_DURATION);
+
+};
+
+const hideNewTweetError = function() {
+
+  $("section.new-tweet .error").slideUp(ANIMATION_DURATION);
 
 };
 
@@ -97,10 +105,13 @@ const loadTweets = function() {
 
 $(document).ready(function() {
 
-  const $newTweet = $("section.new-tweet");
-  const $form     = $("section.new-tweet form");
-  const $textarea = $("section.new-tweet textarea");
-  const $error    = $("section.new-tweet .error");
+  const $window      = $(window);
+  const $header      = $("header");
+  const $scrollToTop = $("nav #scroll-to-top");
+  const $newTweet    = $("section.new-tweet");
+  const $form        = $("section.new-tweet form");
+  const $textarea    = $("section.new-tweet textarea");
+  const $error       = $("section.new-tweet .error");
 
   loadTweets();
   $newTweet.hide();
@@ -110,6 +121,7 @@ $(document).ready(function() {
       event.preventDefault();
       $form.trigger("submit");
     }
+    hideNewTweetError();
   });
 
   $form.on("submit", function(event) {
@@ -156,14 +168,26 @@ $(document).ready(function() {
     }
   });
 
+  $window.on("scroll", function(_event) {
+    if ($window.scrollTop() > $header.outerHeight()) {
+      if (!$scrollToTop.is(":visible")) {
+        $scrollToTop.fadeIn(ANIMATION_DURATION);
+      }
+    } else {
+      if ($scrollToTop.is(":visible")) {
+        $scrollToTop.fadeOut(ANIMATION_DURATION);
+      }
+    }
+  });
+
   $("nav #nav_tweet").on("click", function(event) {
     event.preventDefault();
     if (!$newTweet.is(":visible")) {
-      $newTweet.slideDown("fast");
+      $newTweet.slideDown(ANIMATION_DURATION);
       $textarea.focus();
     } else {
       $textarea.blur();
-      $newTweet.slideUp("fast");
+      $newTweet.slideUp(ANIMATION_DURATION);
     }
     window.scroll({
       top:      0,
@@ -174,7 +198,7 @@ $(document).ready(function() {
 
   $error.on("click", function(event) {
     event.preventDefault();
-    $(this).hide();
+    hideNewTweetError();
   });
 
 });
