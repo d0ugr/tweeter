@@ -20,9 +20,9 @@ const tweet = {
         <footer>
           <span>${Math.floor((Date.now() - tweet.created_at) / 1000 / 86400)} days ago</span>
           <div>
-            <img src="/images/profile-hex.png">
-            <img src="/images/view-refresh.svg">
-            <img src="/images/profile-hex.png">
+            <img src="/images/preferences-desktop-locale.svg">
+            <img src="/images/media-playlist-repeat.svg">
+            <img src="/images/dialog-ok.svg">
           </div>
         </footer>
       </article>
