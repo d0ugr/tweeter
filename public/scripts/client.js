@@ -18,6 +18,7 @@ $(document).ready(function() {
 
 
   const $window      = $(window);
+  const $body        = $("body");
   const $header      = $("header");
   const $scrollToTop = $("nav #scroll-to-top");
   const $compose     = $("section.new-tweet");
@@ -84,6 +85,10 @@ $(document).ready(function() {
         }
       });
     }
+  });
+
+  $window.on("resize", function(_event) {
+    $body.css("padding-top", `${$("nav").outerHeight()}px`);
   });
 
   $window.on("scroll", function(_event) {
