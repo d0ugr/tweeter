@@ -39,10 +39,12 @@ nav #scroll-to-top {
   position:         fixed;
   bottom:           .5em;
   right:            2em;
+  cursor:           pointer;
 }
 
 nav #scroll-to-top img {
   width:            200%;
+  height:           200%;
 }
 
 
