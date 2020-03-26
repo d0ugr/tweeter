@@ -4,6 +4,8 @@
 // import util  from "./util.mjs";
 import error from "./error.mjs";
 
+const $tweetTemplate = $("#templates article");
+
 
 
 const tweet = {
@@ -28,7 +30,7 @@ const tweet = {
     //   </article>
     // `);
 
-    const $tweet = $("#templates article").clone();
+    const $tweet = $tweetTemplate.clone();
     $tweet.find("header img").attr("src", tweet.user.avatars);
     $tweet.find("header .name").text(tweet.user.name);
     $tweet.find("header .handle").text(tweet.user.handle);
