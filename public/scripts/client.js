@@ -165,6 +165,11 @@ $(document).ready(function() {
       $textarea.blur();
       $newTweet.slideUp("fast");
     }
+    window.scroll({
+      top:      0,
+      left:     0,
+      behavior: "smooth"
+    });
   });
 
   $error.on("click", function(event) {
