@@ -13,7 +13,6 @@ section#tweets {
   flex-direction:   column;
   min-width:        10rem;
   max-width:        25rem;
-  cursor:           default;
 }
 
 
@@ -59,6 +58,12 @@ section#tweets article header div.handle {
 
 
 
+section#tweets article p {
+  width:            100%;
+}
+
+
+
 section#tweets article footer {
   border-top:       .15rem solid burlywood;
   margin:           .5rem 0 0;
@@ -75,8 +80,8 @@ section#tweets article footer div {
 }
 
 section#tweets article footer img {
-  width:            1rem;
-  height:           1rem;
+  width:            1em;
+  height:           1em;
   vertical-align:   middle;
   cursor:           pointer;
 }
