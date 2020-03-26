@@ -97,12 +97,13 @@ const loadTweets = function() {
 
 $(document).ready(function() {
 
+  const $newTweet = $("section.new-tweet");
   const $form     = $("section.new-tweet form");
   const $textarea = $("section.new-tweet textarea");
   const $error    = $("section.new-tweet .error");
 
   loadTweets();
-  $textarea.focus();
+  $newTweet.hide();
 
   $textarea.on("keydown", function(event) {
     if (event.keyCode === KeyboardEvent.DOM_VK_RETURN) {
@@ -152,6 +153,17 @@ $(document).ready(function() {
           $textarea.val("").focus();
         }
       });
+    }
+  });
+
+  $("nav #nav_tweet").on("click", function(event) {
+    event.preventDefault();
+    if (!$newTweet.is(":visible")) {
+      $newTweet.slideDown("fast");
+      $textarea.focus();
+    } else {
+      $textarea.blur();
+      $newTweet.slideUp("fast");
     }
   });
 
