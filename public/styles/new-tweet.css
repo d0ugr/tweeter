@@ -13,6 +13,7 @@ section.new-tweet label {
 
 section.new-tweet textarea {
   display:          block;
+  resize:           none;
   width:            100%;
   border:           none;
   border-bottom:    0.15em solid burlywood;
