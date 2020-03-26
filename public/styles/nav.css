@@ -11,11 +11,11 @@ nav {
   padding:          1.5rem;
   background-color: #4056A1;
   color:            ghostwhite;
+  overflow-wrap:    normal;
 }
 
 nav #nav_title {
   font-family:      "Bungee";
-  overflow-wrap:    normal;
 }
 
 nav #nav_box {
