@@ -4,6 +4,8 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+import MAX_TWEET_LENGTH from "./composer-char-counter.mjs";
+
 
 
 const DEFAULT_ERROR_MESSAGE     = "NOPE NOPE NOPE";

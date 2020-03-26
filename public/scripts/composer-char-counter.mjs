@@ -21,3 +21,7 @@ $(document).ready(function() {
 
 
 
+export default MAX_TWEET_LENGTH;
+
+
+
