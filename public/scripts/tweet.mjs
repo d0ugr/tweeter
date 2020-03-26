@@ -76,6 +76,7 @@ const tweet = {
       if (err) {
         error.showNewTweetError(`Error loading tweets: ${JSON.stringify(err, null, 2)}`);
       } else {
+        $("section#tweets").empty();
         this.renderTweets(data);
       }
     });
