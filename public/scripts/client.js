@@ -7,6 +7,7 @@
 import constants from "./constants.mjs";
 import error     from "./error.mjs";
 import ui        from "./ui.mjs";
+import counter   from "./composer-char-counter.mjs";
 import tweet     from "./tweet.mjs";
 
 
@@ -27,6 +28,7 @@ $(document).ready(function() {
 
 
   $compose.hide();
+  counter.init();
   ui.showScrollToTopButton($scrollToTop, $header.outerHeight());
   tweet.loadTweets();
 
