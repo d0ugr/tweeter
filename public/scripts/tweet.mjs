@@ -1,7 +1,7 @@
 
 
 
-import util  from "./util.mjs";
+// import util  from "./util.mjs";
 import error from "./error.mjs";
 
 
@@ -10,23 +10,31 @@ const tweet = {
 
   createTweetElement: function(tweet) {
 
-    return $(`
-      <article>
-        <header>
-          <img src="${tweet.user.avatars}"><div class="name">${tweet.user.name}</div>
-          <div class="handle">${tweet.user.handle}</div>
-        </header>
-        <p>${util.escapeText(tweet.content.text)}</p>
-        <footer>
-          <span>${Math.floor((Date.now() - tweet.created_at) / 1000 / 86400)} days ago</span>
-          <div>
-            <img src="/images/preferences-desktop-locale.svg">
-            <img src="/images/media-playlist-repeat.svg">
-            <img src="/images/dialog-ok.svg">
-          </div>
-        </footer>
-      </article>
-    `);
+    // return $(`
+    //   <article>
+    //     <header>
+    //       <img src="${tweet.user.avatars}"><div class="name">${tweet.user.name}</div>
+    //       <div class="handle">${tweet.user.handle}</div>
+    //     </header>
+    //     <p>${util.escapeText(tweet.content.text)}</p>
+    //     <footer>
+    //       <span>${Math.floor((Date.now() - tweet.created_at) / 1000 / 86400)} days ago</span>
+    //       <div>
+    //         <img src="/images/preferences-desktop-locale.svg">
+    //         <img src="/images/media-playlist-repeat.svg">
+    //         <img src="/images/dialog-ok.svg">
+    //       </div>
+    //     </footer>
+    //   </article>
+    // `);
+
+    const $tweet = $("#templates article").clone();
+    $tweet.find("header img").attr("src", tweet.user.avatars);
+    $tweet.find("header .name").text(tweet.user.name);
+    $tweet.find("header .handle").text(tweet.user.handle);
+    $tweet.find("p").text(tweet.content.text);
+    $tweet.find("footer span").html(`${Math.floor((Date.now() - tweet.created_at) / 1000 / 86400)} days ago`);
+    return $tweet;
 
   },
 

@@ -1,6 +1,12 @@
 
 
 
+#templates {
+  display:          none;
+}
+
+
+
 section#tweets {
   width:            90%;
   margin:           .5em auto;
