@@ -2,8 +2,9 @@
 
 
 section.new-tweet {
-  width:            90%;
-  margin:           .5rem auto;
+  width:            100%;
+  max-width:        25rem;
+  margin:           0 0 1rem 0;
 }
 
 section.new-tweet label {

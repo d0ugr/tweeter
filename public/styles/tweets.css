@@ -1,15 +1,18 @@
 
 
 
-#templates {
-  display:          none;
+section.tweets-container {
+  display:          flex;
+  flex-grow:        1;
+  flex-direction:   column;
+  padding:          1rem;
 }
 
-
-
 section#tweets {
-  width:            90%;
-  margin:           .5rem auto;
+  display:          flex;
+  flex-direction:   column;
+  min-width:        10rem;
+  max-width:        25rem;
   cursor:           default;
 }
 
@@ -17,7 +20,7 @@ section#tweets {
 
 section#tweets article {
   border:           .15rem solid burlywood;
-  margin:           1rem 0;
+  margin:           0 0 1rem 0;
   padding:          .5rem;
 }
 

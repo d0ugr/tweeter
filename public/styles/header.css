@@ -2,9 +2,11 @@
 
 
 header#profile {
+  flex-grow:        1;
   position:         relative;
-  width:            100%;
+  min-width:        10rem;
   height:           10rem;
+  margin:           1rem 0 0 1rem;
   background:       burlywood url("/images/food.png") repeat;
 }
 
