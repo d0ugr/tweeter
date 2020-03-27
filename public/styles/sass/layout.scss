@@ -27,18 +27,6 @@ $error-message-colour:        crimson;
 $error-description-colour:    black;
 
 /*
-**  Import modules
-*/
-
-@import "nav";
-@import "main";
-@import "header";
-@import "new-tweet";
-@import "tweets";
-@import "error";
-@import "media";
-
-/*
 ** http://www.paulirish.com/2012/box-sizing-border-box-ftw/
 ** https://css-tricks.com/international-box-sizing-awareness-day/
 ** Do not modify these two selectors, please
@@ -83,6 +71,18 @@ h1, h2, h3, h4, h5, h6 {
 .bold {
   font-weight:      bold;
 }
+
+/*
+**  Import modules
+*/
+
+@import "nav";
+@import "main";
+@import "header";
+@import "new-tweet";
+@import "tweets";
+@import "error";
+@import "media";
 
 
 
