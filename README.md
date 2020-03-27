@@ -6,30 +6,27 @@ Tweeter is not suitable for production use and is only for demonstration and edu
 
 ## **Screenshots**
 
-Tweeter is beautiful:
+Tweeter is beautiful.
+
+Large screen, initial display, composing new tweet:
 
 !["Large screen composing"](docs/tweeter-screenshot-01-compose.png)
 
-Large screen, initial display, composing new tweet
-
+Large screen, error display:
 
 !["Large screen error"](docs/tweeter-screenshot-02-error.png)
 
-Large screen, error display
-
+Small screen, hovering over a tweet:
 
 !["Small screen hover tweet"](docs/tweeter-screenshot-03-small-hover.png)
 
-Small screen, hovering over a tweet
-
+Small screen, scrolled down:
 
 !["Small screen scroll button"](docs/tweeter-screenshot-04-small-scroll.png)
 
-Small screen, scrolled down
+Almost usable on a Nokia 8110:
 
 !["Nokia 8110"](docs/tweeter-screenshot-05-nokia-8110.png)
-
-Almost usable on a Nokia 8110
 
 ## **Getting Started**
 
