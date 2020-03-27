@@ -28,7 +28,6 @@ $(document).ready(function() {
 
 
 
-  $compose.hide();
   counter.init();
   ui.showScrollToTopButton($scrollToTop, $header.outerHeight());
   tweet.loadTweets();

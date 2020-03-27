@@ -5,6 +5,7 @@
 //    The error box is contained in this section however the styles are in _error.scss.
 
 section.new-tweet {
+  display:          none;
   width:            100%;
   max-width:        25rem;
   margin:           0 0 1rem 0;
