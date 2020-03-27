@@ -1,6 +1,8 @@
 
 
 
+// Styles for the main tweet container and individiual tweet boxes.
+
 section.tweets-container {
   display:          flex;
   flex-grow:        1;
@@ -41,13 +43,9 @@ section#tweets {
       }
     }
 
-
-
     p {
       width:            100%;
     }
-
-
 
     footer {
       border-top:       .15rem solid $border-colour;
@@ -75,7 +73,7 @@ section#tweets {
   article:hover {
     box-shadow:       .5rem .5rem 0 0 $tweet-shadow-colour;
 
-    div.handle,
+    .handle,
     footer div {
       display:          inline-block;
     }

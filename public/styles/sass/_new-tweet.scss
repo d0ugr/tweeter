@@ -1,6 +1,9 @@
 
 
 
+// Compose box <section> styles.
+//    The error box is contained in this section however the styles are in _error.scss.
+
 section.new-tweet {
   width:            100%;
   max-width:        25rem;
@@ -39,10 +42,6 @@ section.new-tweet {
     float:            right;
     padding:          .25rem 0;
     font-family:      $heavy-font;
-  }
-
-  .error {
-    display:          none;
   }
 }
 

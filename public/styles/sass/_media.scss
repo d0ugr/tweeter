@@ -1,7 +1,9 @@
 
 
 
-// Media queries for narrow screens
+// Media queries for narrow screens.
+//    Currently only switches the main container from row to column flex direction
+//    and adjusts margins accordingly.
 
 @media only screen and (max-width: 47rem) {
 

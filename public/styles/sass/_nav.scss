@@ -1,6 +1,12 @@
 
 
 
+// <nav> styles.
+//    The nav bar is fixed at the top of the viewport and shows
+//    the app name and navigation links.  It also contains the scroll-to-top
+//    button which is fixed at bottom-right and doesn't show in the nav bar,
+//    but <nav> is an appropriate place to house it.
+
 nav {
   position:         fixed;
   z-index:          1337;
