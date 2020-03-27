@@ -25,10 +25,11 @@ section.new-tweet {
     padding:          .25rem;
     background:       transparent;
 
-    ::placeholder {
-      font-style:       italic;
-      opacity:          .15;
-    }
+  }
+
+  textarea::placeholder {
+    font-style:       italic;
+    opacity:          .15;
   }
 
   button {
