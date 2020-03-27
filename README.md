@@ -1,4 +1,4 @@
-# Tweeter Project
+# **Tweeter**
 
 Tweeter is a simple Twitter clone.  It is intended for demonstration of responsive, single-page web app design that is suitable for use on any device.  It does not include any user account management or permanent storage of data.
 
