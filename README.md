@@ -1,6 +1,6 @@
 # **Tweeter**
 
-Tweeter is a simple Twitter clone.  It is intended for demonstration of responsive, single-page web app design that is suitable for use on any device.  It does not include any user account management or permanent storage of data.
+Tweeter is a simple Twitter clone that uses HTML5/SASS->CSS3/jQuery client-side and Node.js/Express/MongoDB server-side.  It is intended for demonstration of responsive, single-page web app design that is suitable for use on any device.  It does not include any user account management or permanent storage of data.
 
 Tweeter is not suitable for production use and is only for demonstration and educational purposes.
 
