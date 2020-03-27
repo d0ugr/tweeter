@@ -4,9 +4,11 @@
   "description": "A twitter clone by Lighthouse Labs for web bootcamp students to learn front-end dev skillz",
   "main": "server/index.js",
   "scripts": {
+    "watch-sass": "node_modules/node-sass/bin/node-sass --output-style compressed --source-map true -w public/styles/sass/ -o public/styles/css/",
+    "sass": "node_modules/node-sass/bin/node-sass --output-style compressed --source-map true public/styles/sass/ -o public/styles/css/",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/index.js",
-    "local": "./node_modules/.bin/nodemon --watch server -e js server/index.js"
+    "local": "node_modules/.bin/nodemon --watch server -e js server/index.js"
   },
   "author": "Lighthouse Labs",
   "license": "ISC",
@@ -17,6 +19,7 @@
     "md5": "^2.1.0"
   },
   "devDependencies": {
+    "node-sass": "^4.13.1",
     "nodemon": "^1.19.4"
   }
 }

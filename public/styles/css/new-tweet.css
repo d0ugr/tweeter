@@ -1,0 +1,3 @@
+section.new-tweet{width:100%;max-width:25rem;margin:0 0 1rem 0}section.new-tweet label{display:block;padding:0 0 .4rem}section.new-tweet textarea{display:block;resize:none;width:100%;border:none;border-bottom:0.15rem solid burlywood;margin:0 0 1rem;padding:.25rem;background:transparent}section.new-tweet textarea ::placeholder{font-style:italic;opacity:.15}section.new-tweet button{border:.15rem solid gold;box-shadow:0 0 .25rem 0 burlywood;padding:.25rem 1rem;background:ghostwhite;font-family:Bungee}section.new-tweet output{float:right;padding:.25rem 0;font-family:Bungee}section.new-tweet .error{display:none}
+
+/*# sourceMappingURL=new-tweet.css.map */

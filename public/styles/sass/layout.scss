@@ -28,7 +28,7 @@ body {
   background:       #F4F1EC; /*url("/images/profile-hex.png") center / 50% no-repeat fixed;*/
   color:            #545149;
   font-size:        0.75rem;
-  overflow-wrap:    break-word;
+  word-break:       break-word;
   cursor:           default;
 }
 

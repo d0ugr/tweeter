@@ -13,18 +13,18 @@ div.error {
   box-shadow:       0 0 .5rem .5rem red;
   padding:          1em;
   cursor:           default;
-}
 
-div.error h1 {
-  margin:           0 0 .25rem;
-  font-family:      Bungee;
-  color:            crimson;
-}
+  h1 {
+    margin:           0 0 .25rem;
+    font-family:      Bungee;
+    color:            crimson;
+  }
 
-div.error p {
-  margin:           0;
-  font-weight:      bolder;
-  color:            black;
+  p {
+    margin:           0;
+    font-weight:      bolder;
+    color:            black;
+  }
 }
 
 
