@@ -11,7 +11,7 @@ import tweet from "./tweet.mjs";
 
 // Initialize stuff and load those all-important tweets:
 
-$(document).ready(() => {
+$(document).ready(function() {
 
   ui.init();
   tweet.init();

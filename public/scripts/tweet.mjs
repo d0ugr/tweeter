@@ -32,7 +32,7 @@ const getTweets = function(callback) {
     method:   "GET",
     dataType: "JSON",
     cache:    false
-  }).then((data, status, xhr) => {
+  }).then(function(data, status, xhr) {
     if (status !== "success") {
       callback(xhr, null);
     } else {
@@ -94,7 +94,7 @@ const tweet = {
     // Handle the new tweet form submission with AJAX and prevent leaving the page:
     //    TODO: Update AJAX error messages to be more user friendly.
 
-    $composeForm.on("submit", (event) => {
+    $composeForm.on("submit", function(event) {
       event.preventDefault();
       error.hideError();
       // Sanitize and validate the tweet input:
@@ -110,7 +110,7 @@ const tweet = {
         $.ajax("/tweets", {
           method: "POST",
           data:   $(this).serialize()
-        }).then((_data, status, xhr) => {
+        }).then(function(_data, status, xhr) {
           if (status !== "success") {
             error.showError(`${status}: ${JSON.stringify(xhr, null, 2)}`);
           } else {
@@ -122,7 +122,7 @@ const tweet = {
               if (err) {
                 error.showError(`Error getting tweet: ${JSON.stringify(err, null, 2)}`);
               } else {
-                tweet.renderTweets(data[data.length - 1]);
+                renderTweets(data[data.length - 1]);
               }
             });
             $composeText.val("").focus();

@@ -20,7 +20,7 @@ import error     from "./error.mjs";
 //
 //    $textInput   Object: jQuery reference to a text input object that supports .val()
 
-const updateCharCounter = ($textInput) => {
+const updateCharCounter = function($textInput) {
 
   const charsRemaining = constants.MAX_TWEET_LENGTH - $textInput.val().length;
   $("section.new-tweet .counter").html(charsRemaining).toggleClass("error-text", charsRemaining < 0);
@@ -31,7 +31,7 @@ const updateCharCounter = ($textInput) => {
 //
 //    $button   Object: jQuery object for the DOM element to show/hide.
 
-const showScrollToTopButton = ($button) => {
+const showScrollToTopButton = function($button) {
 
   if ($(window).scrollTop() > $("header").outerHeight()) {
     if (!$button.is(":visible")) {
@@ -47,7 +47,7 @@ const showScrollToTopButton = ($button) => {
 
 // scrollToTop smooth-scrolls the page to the top.
 
-const scrollToTop = () => {
+const scrollToTop = function() {
 
   const body = $("html, body");
   body.stop().animate({ scrollTop: 0 }, constants.ANIMATION_DURATION, "swing");
@@ -73,12 +73,12 @@ const ui = {
 
     // Update the top body padding that brings the content down below the nav bar:
     //    This can probably be done without JS, but no time now...
-    $window.on("resize", (_event) => {
+    $window.on("resize", function(_event) {
       $body.css("padding-top", `${$nav.outerHeight()}px`);
     });
 
     // Show/hide the scroll-to-top button if the page has been scrolled down enough:
-    $window.on("scroll", (_event) => {
+    $window.on("scroll", function(_event) {
       showScrollToTopButton($scrollToTop);
     });
     // Initialize the scroll-to-top button since the page may already be scrolled down when refreshing:
@@ -86,7 +86,7 @@ const ui = {
 
     // Scroll to the top of the page and focus the compose tweet box
     //    when the scroll-top-top button is clicked:
-    $scrollToTop.on("click", (event) => {
+    $scrollToTop.on("click", function(event) {
       event.preventDefault();
       if (!$compose.is(":visible")) {
         $compose.slideDown(constants.ANIMATION_DURATION);
@@ -96,7 +96,7 @@ const ui = {
     });
 
     // Update the characters remaining count whenever the compose input changes:
-    $composeText.on("input change propertychange", (_event) => {
+    $composeText.on("input change propertychange", function(_event) {
       updateCharCounter($composeText);
     });
     // Force a character count update on page load to initialize it:
@@ -104,7 +104,7 @@ const ui = {
     updateCharCounter($composeText);
 
     // Handle the Enter key to cause form submission:
-    $composeText.on("keydown", (event) => {
+    $composeText.on("keydown", function(event) {
       if (event.keyCode === KeyboardEvent.DOM_VK_RETURN) {
         event.preventDefault();
         $composeForm.trigger("submit");
@@ -113,7 +113,7 @@ const ui = {
     });
 
     // Show/hide the compose tweet box:
-    $("nav #nav-tweet").on("click", (event) => {
+    $("nav #nav-tweet").on("click", function(event) {
       event.preventDefault();
       error.hideError();
       scrollToTop();
@@ -126,7 +126,7 @@ const ui = {
     });
 
     // Hide the error box when it is clicked:
-    $error.on("click", (event) => {
+    $error.on("click", function(event) {
       event.preventDefault();
       error.hideError();
     });
