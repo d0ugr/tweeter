@@ -8,8 +8,8 @@ main {
   display:          flex;
   flex-direction:   row;
   align-items:      flex-start;
-  max-width:        40rem;
-  margin:           0 auto 0;
+  max-width:        $content-max-width;
+  margin:           0 auto;
   padding:          .5rem;
 }
 

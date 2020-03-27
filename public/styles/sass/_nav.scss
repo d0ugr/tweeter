@@ -13,38 +13,45 @@ nav {
   top:              0;
   left:             0;
   right:            0;
-  padding:          1.5rem;
+  padding:          1.5rem 0;
   background-color: $nav-colour;
   color:            $nav-text-colour;
   word-break:       normal;
 
-  #nav-title {
-    font-family:      $heavy-font;
-  }
+  .container {
+    width:          100%;
+    max-width:      $content-max-width;
+    margin:         0 auto;
+    padding:        0 1rem;
 
-  #nav-box {
-    float:            right;
-    text-align:       right;
-  }
+    #nav-title {
+      padding:          0 .5rem 0 0;
+      font-family:      $heavy-font;
+    }
 
-  #nav-tweet {
-    padding:          0 .5rem;
-    cursor:           pointer;
-  }
+    #nav-box {
+      float:            right;
+      text-align:       right;
+    }
 
-  #nav-tweet:hover {
-    background:       $nav-tweet-hover-bg-colour;
-    box-shadow:       0 0 .25rem .25rem $nav-tweet-shadow-colour;
-  }
+    #nav-tweet {
+      cursor:           pointer;
+    }
 
-  #scroll-to-top {
-    display:          none;
-    position:         fixed;
-    bottom:           .5rem;
-    right:            .5rem;
-    width:            2rem;
-    height:           2rem;
-    cursor:           pointer;
+    #nav-tweet:hover {
+      background:       $nav-tweet-hover-bg-colour;
+      box-shadow:       0 0 .25rem .25rem $nav-tweet-shadow-colour;
+    }
+
+    #scroll-to-top {
+      display:          none;
+      position:         fixed;
+      bottom:           .5rem;
+      right:            .5rem;
+      width:            2rem;
+      height:           2rem;
+      cursor:           pointer;
+    }
   }
 }
 

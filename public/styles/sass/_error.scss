@@ -17,6 +17,7 @@ div.error {
   border:           .1rem solid $error-colour;
   box-shadow:       0 0 .5rem .5rem $error-colour;
   padding:          1em;
+  background:       $error-bg-colour;
   cursor:           default;
 
   h1 {
