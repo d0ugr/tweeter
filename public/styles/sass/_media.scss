@@ -5,7 +5,7 @@
 //    Currently only switches the main container from row to column flex direction
 //    and adjusts margins accordingly.
 
-@media only screen and (max-width: 47rem) {
+@media only screen and (max-width: 41rem) {
 
   main {
     flex-direction:   column;

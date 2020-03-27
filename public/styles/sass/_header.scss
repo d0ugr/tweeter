@@ -5,7 +5,7 @@
 //    The header shows the current user's avatar and name.
 
 header#profile {
-  flex-grow:        1;
+  flex-basis:       33%;
   min-width:        10rem;
   margin:           .5rem;
   padding:          1rem;
