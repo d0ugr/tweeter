@@ -1,8 +1,8 @@
 {
 	"version": 3,
-	"file": "layout.css",
+	"file": "tweeter.css",
 	"sources": [
-		"../sass/layout.scss",
+		"../sass/tweeter.scss",
 		"../sass/_nav.scss",
 		"../sass/_main.scss",
 		"../sass/_header.scss",
