@@ -16,7 +16,7 @@ section.new-tweet {
     resize:           none;
     width:            100%;
     border:           none;
-    border-bottom:    0.15rem solid burlywood;
+    border-bottom:    0.15rem solid $border-colour;
     margin:           0 0 1rem;
     padding:          .25rem;
     background:       transparent;
@@ -28,17 +28,17 @@ section.new-tweet {
   }
 
   button {
-    border:           .15rem solid gold;
-    box-shadow:       0 0 .25rem 0 burlywood;
+    border:           .15rem solid $tweet-button-border-colour;
+    box-shadow:       0 0 .25rem 0 $tweet-button-shadow-colour;
     padding:          .25rem 1rem;
-    background:       ghostwhite;
-    font-family:      Bungee;
+    background:       $tweet-button-bg-colour;
+    font-family:      $heavy-font;
   }
 
   output {
     float:            right;
     padding:          .25rem 0;
-    font-family:      Bungee;
+    font-family:      $heavy-font;
   }
 
   .error {

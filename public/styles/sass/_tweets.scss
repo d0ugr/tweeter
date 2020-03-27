@@ -15,7 +15,7 @@ section#tweets {
   max-width:        25rem;
 
   article {
-    border:           .15rem solid burlywood;
+    border:           .15rem solid $border-colour;
     margin:           0 0 1rem 0;
     padding:          .5rem;
 
@@ -50,7 +50,7 @@ section#tweets {
 
 
     footer {
-      border-top:       .15rem solid burlywood;
+      border-top:       .15rem solid $border-colour;
       margin:           .5rem 0 0;
       padding:          .3rem 0 0;
 
@@ -64,8 +64,8 @@ section#tweets {
       }
 
       img {
-        width:            1em;
-        height:           1em;
+        width:            .75em;
+        height:           .75em;
         vertical-align:   middle;
         cursor:           pointer;
       }
@@ -73,7 +73,7 @@ section#tweets {
   }
 
   article:hover {
-    box-shadow:       .5rem .5rem 0 0 rebeccapurple;
+    box-shadow:       .5rem .5rem 0 0 $tweet-shadow-colour;
 
     div.handle,
     footer div {

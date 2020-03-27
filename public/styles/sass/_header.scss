@@ -7,7 +7,7 @@ header#profile {
   min-width:        10rem;
   height:           10rem;
   margin:           1rem 0 0 1rem;
-  background:       burlywood url("/images/food.png") repeat;
+  background:       $header-bg-colour $header-bg-image repeat;
 
   .container {
     position:         absolute;

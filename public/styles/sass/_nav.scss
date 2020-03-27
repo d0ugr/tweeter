@@ -3,35 +3,33 @@
 
 nav {
   position:         fixed;
-  z-index:          420;
+  z-index:          1337;
   top:              0;
   left:             0;
   right:            0;
   padding:          1.5rem;
-  background-color: #4056A1;
-  color:            ghostwhite;
-  overflow-wrap:    normal;
+  background-color: $nav-colour;
+  color:            $nav-text-colour;
+  word-break:       normal;
 
-  #nav_title {
-    font-family:      "Bungee";
+  #nav-title {
+    font-family:      $heavy-font;
   }
 
-  #nav_box {
+  #nav-box {
     float:            right;
     text-align:       right;
   }
 
-  #nav_tweet {
+  #nav-tweet {
     padding:          0 .5rem;
     cursor:           pointer;
 
     :hover {
-      background:       rgba(0, 0, 0, .25);
-      box-shadow:       0 0 .25rem .25rem skyblue;
+      background:       $nav-tweet-hover-bg-colour;
+      box-shadow:       0 0 .25rem .25rem $nav-tweet-shadow-colour;
     }
   }
-
-
 
   #scroll-to-top {
     display:          none;

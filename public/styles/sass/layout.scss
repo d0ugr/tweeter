@@ -2,6 +2,43 @@
 
 
 /*
+**  App configuration variables
+*/
+
+$font-size:                   0.65cm;
+$normal-font:                 Source Sans Pro;
+$heavy-font:                  Bungee;
+
+$bg-colour:                   #F4F1EC;
+$fg-colour:                   #545149;
+$nav-colour:                  #4056A1;
+$nav-text-colour:             ghostwhite;
+$nav-tweet-hover-bg-colour:   rgba(0, 0, 0, .25);
+$nav-tweet-shadow-colour:     skyblue;
+$header-bg-colour:            burlywood;
+$header-bg-image:             url("/images/food.png");
+$border-colour:               burlywood;
+$tweet-button-border-colour:  gold;
+$tweet-button-bg-colour:      ghostwhite;
+$tweet-button-shadow-colour:  burlywood;
+$tweet-shadow-colour:         skyblue;
+$error-colour:                red;
+$error-message-colour:        crimson;
+$error-description-colour:    black;
+
+/*
+**  Import modules
+*/
+
+@import "nav";
+@import "main";
+@import "header";
+@import "new-tweet";
+@import "tweets";
+@import "error";
+@import "media";
+
+/*
 ** http://www.paulirish.com/2012/box-sizing-border-box-ftw/
 ** https://css-tricks.com/international-box-sizing-awareness-day/
 ** Do not modify these two selectors, please
@@ -9,7 +46,7 @@
 
 *, *:before, *:after {
   box-sizing:       inherit;
-  font-family:      Source Sans Pro, sans-serif;
+  font-family:      $normal-font, sans-serif;
 }
 
 /*
@@ -18,16 +55,15 @@
 
 html {
   box-sizing:       border-box;
-  height:           100%;
-  font-size:        .75cm;
+  height:           100%; // Fixes Chrome not doing background-size: 100% 100%;
+  font-size:        $font-size;
 }
 
 body {
   height:           100%;
   padding-top:      4rem;
-  background:       #F4F1EC; /*url("/images/profile-hex.png") center / 50% no-repeat fixed;*/
-  color:            #545149;
-  font-size:        0.75rem;
+  background:       $bg-colour;
+  color:            $fg-colour;
   word-break:       break-word;
   cursor:           default;
 }

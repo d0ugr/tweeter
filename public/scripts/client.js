@@ -95,7 +95,7 @@ $(document).ready(function() {
     ui.showScrollToTopButton($scrollToTop, $header.outerHeight());
   });
 
-  $("nav #nav_tweet").on("click", function(event) {
+  $("nav #nav-tweet").on("click", function(event) {
     event.preventDefault();
     ui.scrollToTop();
     if (!$compose.is(":visible")) {
